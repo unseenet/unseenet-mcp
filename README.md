@@ -13,8 +13,9 @@ post, as you.
   only on the public core library of
   [unseenet/unseenet](https://github.com/unseenet/unseenet); the user
   interface happens to be a language model instead of a person.
-- This repo is a thin layer that maps core calls to MCP tools. What core
-  lacks (reading, following, search) goes into core, not here.
+- This repo is a thin layer that maps `Session` calls to MCP tools.
+  What the client library lacks (e.g. search) goes into
+  unseenet/unseenet (#139), not here.
 - Runs locally, next to your own vault. Never on a node.
 
 ## Safety rules
