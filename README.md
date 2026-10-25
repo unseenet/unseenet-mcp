@@ -1,4 +1,23 @@
-# unseenet-mcp
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/unseenet/unseenet/main/assets/logo-dark.svg">
+    <img src="https://raw.githubusercontent.com/unseenet/unseenet/main/assets/logo-light.svg" alt="Unseenet" width="360">
+  </picture>
+</p>
+
+<h1 align="center">unseenet-mcp</h1>
+
+<p align="center"><b>Unseenet for language models.</b><br>
+An MCP server: an LLM client reads groups and threads, searches and - only when you allow it - posts, as you.</p>
+
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue" alt="Apache-2.0"></a>
+</p>
+
+> **Pre-alpha.** Nothing is stable yet, and Unseenet has not had a security
+> review. Do not rely on it to protect anyone yet.
+
+## What it is
 
 An [MCP](https://modelcontextprotocol.io) server for
 [Unseenet](https://unseenet.org): lets an LLM client such as Claude
@@ -6,8 +25,6 @@ Desktop read groups and threads, search and - only when you allow it -
 post, as you.
 
 **Status:** planning. Nothing works yet; see the issues.
-
-## Idea
 
 - It is just another client. Like the TUI and the web client it is built
   only on the public core library of
@@ -18,7 +35,9 @@ post, as you.
   unseenet/unseenet (#139), not here.
 - Runs locally, next to your own vault. Never on a node.
 
-## Safety rules
+## How it works
+
+### Safety rules
 
 - **Read-only by default.** Posting is a separate tool that must be
   switched on, and every post is confirmed by you.
@@ -32,7 +51,7 @@ post, as you.
   cloud LLM goes to that provider. That is your choice to make; use a
   local model if it matters.
 
-## Planned tools
+### Planned tools
 
 | Tool | Does |
 |---|---|
@@ -42,18 +61,21 @@ post, as you.
 | `search` | search a group or all subscribed groups |
 | `post` | post or reply (off by default, confirmed) |
 
-## Part of Unseenet
+## Versions and releases
 
-Unseenet is made in several repositories, each released on its own:
+Not released yet: it is being planned. When it is, it follows the
+[Unseenet conventions](https://github.com/unseenet/.github/blob/main/CONVENTIONS.md#versions).
+
+## Part of Unseenet
 
 | Repository | What it is |
 |---|---|
 | [unseenet](https://github.com/unseenet/unseenet) | The protocol (UN-RFCs), the core library, the node and the command-line client |
-| [unseenet-tui](https://github.com/unseenet/unseenet-tui) | The terminal client (moving here from unseenet, unseenet#548) |
+| [unseenet-tui](https://github.com/unseenet/unseenet-tui) | The terminal client |
 | [unseenet-gui](https://github.com/unseenet/unseenet-gui) | The graphical client - in a window, booted, or in a browser |
-| [unseenet-portable](https://github.com/unseenet/unseenet-portable) | Builds the portable clients, Terminal and Graphical, with Tor inside (unseenet#549) |
-| [unseenet-bootable](https://github.com/unseenet/unseenet-bootable) | Builds the bootable images, Terminal and Graphical, and later a node image (unseenet#550) |
-| [unseenet-docs](https://github.com/unseenet/unseenet-docs) | The site [unseenet.org](https://unseenet.org), gathering the docs of every repository (unseenet#547) |
+| [unseenet-portable](https://github.com/unseenet/unseenet-portable) | Builds the portable clients, Terminal and Graphical, with Tor inside |
+| [unseenet-bootable](https://github.com/unseenet/unseenet-bootable) | Builds the bootable images, Terminal and Graphical |
+| [unseenet-docs](https://github.com/unseenet/unseenet-docs) | The site [unseenet.org](https://unseenet.org) |
 | [unseenet-entrance](https://github.com/unseenet/unseenet-entrance) | Web entrances: the graphical client in an ordinary browser |
 | [unseenet-gateway](https://github.com/unseenet/unseenet-gateway) | Gateways to other networks: Usenet, Nostr, Matrix |
 | [unseenet-bots](https://github.com/unseenet/unseenet-bots) | Bots that keep channels filled with current content |
@@ -62,6 +84,6 @@ Unseenet is made in several repositories, each released on its own:
 | [unseenet-mcp](https://github.com/unseenet/unseenet-mcp) | An MCP server, so a language model can read and post as you (planning) |
 | [unseenet-demo](https://github.com/unseenet/unseenet-demo) | Demo people, feeds and sites, made with the command-line client |
 
-## Licence
+## License
 
-Apache-2.0, like the rest of Unseenet.
+[Apache License 2.0](LICENSE). The Unseenet logo: CC BY 4.0.
