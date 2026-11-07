@@ -11,9 +11,12 @@ license = { text = "Apache-2.0" }
 authors = [{ name = "Andreas Lorensen" }]
 requires-python = ">=3.11"
 dependencies = [
-    "unseenet @ git+https://github.com/unseenet/unseenet.git",
-    "mcp>=1.0",
+    "unseenet>=0.7.1,<0.8",   # one minor version of the core at a time
+    "mcp>=2.3,<3",
 ]
+
+[project.scripts]
+unseenet-mcp = "unseenet_mcp.server:main"
 
 [project.optional-dependencies]
 dev = ["pytest>=8", "pytest-asyncio>=0.23"]
@@ -24,3 +27,4 @@ where = ["src"]
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
