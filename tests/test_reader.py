@@ -44,7 +44,8 @@ class Current:
     members: list = field(default_factory=lambda: [1, 2, 3])
     min_level: int = 3
 
-    def full(self):
+    @property
+    def full(self):                              # a property, as in core.council
         return self.members
 
 

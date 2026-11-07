@@ -176,7 +176,7 @@ class Reader:
                 chain = await self.session.council_chain(gid)
                 cur = chain.current
                 entry["members"] = len(cur.members) if cur else None
-                entry["full_members"] = len(cur.full()) if cur else None
+                entry["full_members"] = len(cur.full) if cur else None      # a property
                 entry["min_level"] = cur.min_level if cur else None
                 entry["hearings"] = [{**h, "reason": clean(str(h.get("reason") or ""), 500),
                                       "closes": str(h["closes"]) if h.get("closes") else None,
